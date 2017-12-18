@@ -1,0 +1,94 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>New User</title>
+	<link rel="stylesheet" href="{% static 'main.css' %}">
+	<link rel="stylesheet" href="{% static 'font-awesome.min.css' %}">
+
+
+	<script type="text/javascript">
+       function validate(){
+				 var flag=0;
+    var name = document.getElementById('name').value;
+    var email_id = document.getElementById('email_id').value;
+    var dob = document.getElementById('dob').value;
+    var aadhar = document.getElementById('aadhar');
+    var area=document.getElementById('area').value;
+    var wallet=document.getElementById('wallet').value;
+
+
+	}
+
+
+ </script>
+</head>
+
+<body>
+
+		 <center>
+			    <h2>New User</h2>
+
+  <form name="h" action="" method='POST'>{% csrf_token %}
+				<div>
+					<label for="name">Name:
+
+					</label>
+                                        <br>
+					<input type="text" id="name" placeholder="Enter Name" name="name">
+				</div>
+
+				<div>
+					<label for="email_id">Email-ID:
+
+					</label>
+																				<br>
+					<input type="text" id="email_id" placeholder="Enter Email-ID" name="email_id">
+				</div>
+
+				<div>
+					<label for="dob">DOB:
+
+					</label>
+																				<br>
+					<input type="text" id="dob" placeholder="Enter DOB" name="dob">
+				</div>
+
+				<div>
+					<label for="aadhar">Aadhar:
+
+					</label>
+																				<br>
+					<input type="text" id="aadhar" placeholder="Enter Aadhar number" name="aadhar">
+				</div>
+
+				<div>
+					<label for="area">Area:
+
+					</label>
+																				<br>
+					<input type="text" id="area" placeholder="Enter Area" name="area">
+				</div>
+
+				<div>
+					<label for="wallet">Wallet:
+
+					</label>
+																				<br>
+					<input type="text" id="wallet" placeholder="Enter Wallet" name="wallet">
+				</div>
+
+
+
+
+				<button type="submit" onclick="validate()">Register</button>
+
+	</form>
+
+
+
+</body>
+
+</html>
