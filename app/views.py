@@ -34,7 +34,8 @@ def newuserfunc(request):
                 u.area=area
                 u.wallet=wallet
                 u.save()
-                return HttpResponse("User registered");
+       
 
             except IntegrityError as e:
                 return HttpResponse('Aadhar and Email_ID must be unique');
+    return render(request,'newuser.html');
